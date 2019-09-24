@@ -5,6 +5,7 @@ echo "<br><hr>";
 echo "<h2>Cidades cadastradas no Banco de Dados:</h2>";
 $conn = new mysqli("mysql", "redhat", "redhat123", "workshop");
 if ($conn->connect_error) {
+    echo "Erro na conexão";
     die("Connection failed: " . $conn->connect_error);
 }
 $result = $conn->query("SELECT nome FROM cidade");
